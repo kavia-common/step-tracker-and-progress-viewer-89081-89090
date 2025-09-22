@@ -1,0 +1,263 @@
+:root {
+  --ocn-primary: #374151;
+  --ocn-secondary: #9CA3AF;
+  --ocn-success: #10B981;
+  --ocn-error: #EF4444;
+  --ocn-bg: #FFFFFF;
+  --ocn-surface: #F9FAFB;
+  --ocn-text: #111827;
+  --ocn-border: #E5E7EB;
+  --ocn-muted: #6B7280;
+  --ocn-shadow: 0 1px 1px rgba(0,0,0,0.03), 0 2px 8px rgba(0,0,0,0.04);
+  --ocn-radius: 12px;
+}
+
+.ocean-app {
+  display: flex;
+  height: 100%;
+  background: var(--ocn-bg);
+}
+
+.ocean-sidebar {
+  width: 240px;
+  background: linear-gradient(180deg, #fff, #f7f7f9);
+  border-right: 1px solid var(--ocn-border);
+  padding: 20px 16px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.ocean-sidebar .brand {
+  font-weight: 700;
+  color: var(--ocn-primary);
+  letter-spacing: 0.3px;
+  margin-bottom: 16px;
+}
+
+.ocean-sidebar .subtitle {
+  color: var(--ocn-muted);
+  font-size: 12px;
+  margin-bottom: 18px;
+}
+
+.ocean-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ocean-nav button {
+  text-align: left;
+  padding: 10px 12px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--ocn-text);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.ocean-nav button:hover {
+  background: #F3F4F6;
+}
+
+.ocean-nav button.active {
+  background: #EEF2FF;
+  border-color: #E0E7FF;
+  color: #1E40AF;
+}
+
+.ocean-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.ocean-main.with-sidebar {
+  /* reserved class if future adjustments are needed */
+}
+
+.ocean-topbar {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--ocn-border);
+  padding: 0 16px;
+  background: var(--ocn-bg);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.ocean-topbar .toggle {
+  background: transparent;
+  border: 1px solid var(--ocn-border);
+  border-radius: 8px;
+  height: 36px;
+  width: 36px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.ocean-topbar .app-title {
+  margin-left: 12px;
+  font-weight: 600;
+  color: var(--ocn-primary);
+}
+
+.ocean-content {
+  padding: 20px;
+  background: var(--ocn-surface);
+  min-height: calc(100% - 56px);
+}
+
+.ocean-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+
+.ocean-card {
+  background: var(--ocn-bg);
+  border: 1px solid var(--ocn-border);
+  border-radius: var(--ocn-radius);
+  box-shadow: var(--ocn-shadow);
+  padding: 16px;
+}
+
+.ocean-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  color: var(--ocn-primary);
+}
+
+.ocean-kpi {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.ocean-kpi .value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--ocn-primary);
+}
+
+.ocean-kpi .muted {
+  color: var(--ocn-muted);
+  font-size: 12px;
+}
+
+.ocean-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ocean-table th, .ocean-table td {
+  text-align: left;
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--ocn-border);
+  font-size: 14px;
+}
+
+.ocean-table th {
+  color: var(--ocn-muted);
+  font-weight: 600;
+}
+
+.ocean-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--ocn-border);
+  border-radius: 8px;
+  background: #F3F4F6;
+  cursor: pointer;
+}
+
+.ocean-btn.primary {
+  background: var(--ocn-primary);
+  color: white;
+  border-color: var(--ocn-primary);
+}
+
+.ocean-btn.success {
+  background: var(--ocn-success);
+  color: white;
+  border-color: var(--ocn-success);
+}
+
+.ocean-btn.danger {
+  background: var(--ocn-error);
+  color: white;
+  border-color: var(--ocn-error);
+}
+
+.ocean-form {
+  display: grid;
+  gap: 12px;
+  max-width: 520px;
+}
+
+.ocean-field {
+  display: grid;
+  gap: 6px;
+}
+
+.ocean-label {
+  font-size: 12px;
+  color: var(--ocn-muted);
+}
+
+.ocean-input {
+  height: 40px;
+  border: 1px solid var(--ocn-border);
+  border-radius: 10px;
+  padding: 0 12px;
+  background: white;
+}
+
+.ocean-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+  border-color: #93C5FD;
+}
+
+.ocean-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ocean-chart {
+  height: 200px;
+  display: grid;
+  grid-template-columns: repeat(30, 1fr);
+  align-items: end;
+  gap: 4px;
+}
+
+.ocean-bar {
+  background: #DBEAFE;
+  border: 1px solid #BFDBFE;
+  border-radius: 6px 6px 0 0;
+}
+
+.ocean-legend {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ocn-muted);
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+@media (max-width: 960px) {
+  .ocean-sidebar {
+    display: none;
+  }
+}

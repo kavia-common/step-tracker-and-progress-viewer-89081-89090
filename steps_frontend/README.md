@@ -1,82 +1,32 @@
-# Lightweight React Template for KAVIA
+# Step Tracker Frontend (Ocean Professional)
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+A minimalist React frontend that allows users to input their daily step counts and view their progress over time.
 
-## Features
-
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
+- Theme: Ocean Professional (primary #374151, secondary #9CA3AF, success #10B981, error #EF4444)
+- Style: Ultra-minimal, generous whitespace, subtle shadows, clean components
+- Data: Mock local in-memory store (no backend)
 
 ## Getting Started
 
-In the project directory, you can run:
+- `npm start` — run the dev server at http://localhost:3000
+- `npm test` — run tests
+- `npm run build` — build for production
 
-### `npm start`
+## Structure
 
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- `src/ocean.css` — Primary theme and component styles
+- `src/App.js` — App shell and route switching
+- `src/components/Sidebar.js` — Minimal navigation
+- `src/components/Topbar.js` — Header with sidebar toggle
+- `src/pages/Dashboard.js` — KPIs and 30-day bar chart (pure CSS)
+- `src/pages/History.js` — Table of entries, delete rows
+- `src/pages/InputSteps.js` — Form to add/update steps
+- `src/pages/Settings.js` — Adjust daily goal
+- `src/utils/date.js` — Date utilities
+- `src/utils/mockData.js` — Mock dataset generator
 
-### `npm test`
+## Notes
 
-Launches the test runner in interactive watch mode.
+- Routing is intentionally simple (state-based) to avoid extra deps.
+- A future backend can replace the in-memory store by wiring API calls in App state handlers.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-## Customization
-
-### Colors
-
-The main brand colors are defined as CSS variables in `src/App.css`:
-
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
-```
-
-### Components
-
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
-
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
-
-## Learn More
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
